@@ -1,17 +1,26 @@
-import { Text, View, StyleSheet } from "react-native";
+import { TitleGame } from "@/components/titl-game";
+import { useAccelerometer } from "@/hooks/use-accelerometer";
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { StyleSheet, View } from "react-native";
 
-export default function Index() {
+const IndesScreen = () => {
+  const { available, x, y, z } = useAccelerometer();
+  // console.log(available, x, y, z);
+
   return (
     <View style={styles.container}>
-      <Text>Edit src/app/index.tsx to edit this screen.</Text>
+      <StatusBar style="light" />
+      <TitleGame />
     </View>
   );
-}
+};
+
+export default IndesScreen;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: "#0b1220",
   },
 });
