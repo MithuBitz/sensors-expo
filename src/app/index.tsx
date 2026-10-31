@@ -1,21 +1,22 @@
-import { TitleGame } from "@/components/titl-game";
+import { GyroscopeCard } from "@/components/gyroscope-card";
 import { StatusBar } from "expo-status-bar";
+import React from "react";
 import { StyleSheet, View } from "react-native";
 
-const IndesScreen = () => {
+const index = () => {
   return (
     <View style={styles.container}>
       <StatusBar style="light" />
-      <TitleGame />
+      <GyroscopeCard />
     </View>
   );
 };
 
-export default IndesScreen;
+export default index;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0b1220",
+    backgroundColor: "#09090f",
   },
 });
